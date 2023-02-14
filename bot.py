@@ -57,3 +57,32 @@ if op == 'böl':
 
 
 
+# yaş
+a = datetime.today().year
+
+if sys.argv[1] == 'Yaşımı' and sys.argv[2] == 'de':
+    b = int(input('doğum tarixinizi daxil edin: '))
+    print(a - b)
+
+
+
+#text fayl
+if sys.argv[1] == 'text' and sys.argv[2] == 'fayl' and sys.argv[3] == 'yarat':
+    c = input()
+    file = open(f'{c}.txt' , 'x')
+    print('text fayl yarandı')
+
+
+if sys.argv[1] == 'text' and sys.argv[2] == 'yaz':
+    d = input()
+    file = open(f'{input("faylın adını daxil edin")}.txt', 'w')
+    content = file.write(d)
+
+if sys.argv[1] == 'text' and sys.argv[2] == 'elave' and sys.argv[3] == 'et':
+    z = input()
+    file = open(f'{input("faylın adını daxil edin")}.txt', 'a')
+    content = file.write(z)
+
+if sys.argv[1] == 'texti' and sys.argv[2] == 'sil':
+    file = open(f'{input()}.txt', 'r+')
+    content = file.truncate()
